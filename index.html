@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Welcome section -->
+        <div id="welcome" class="quiz">
+            <h1>Welcome to Quiz Master!</h1>
+            <p>Are you ready to test your knowledge?</p>
+            <button id="startBtn" class="btn">Start</button>
+        </div>
+
+        <!-- Quiz section -->
+        <div id="quiz" class="quiz" style="display: none;">
+            <h2>Quiz</h2>
+            <div id="question" class="question">question here</div>
+            <div id="answer-buttons" class="btn-container">
+                <!-- Answer buttons will be dynamically added here -->
+            </div>
+            <div id="timer"></div>
+            <button id="hint-btn" class="btn">Hint (3 left)</button>
+            <button id="next-btn" class="btn">Next</button>
+        </div>
+
+        <!-- Subject selection section -->
+        <div id="subject-selection" class="quiz" style="display: none;">
+            <h2>Choose Your Subject and Difficulty Level:</h2>
+            <div class="subject-options">
+                <!-- English -->
+                <button class="subject-btn" onclick="startQuiz('English', 'easy')">English (Easy)</button>
+                <button class="subject-btn" onclick="startQuiz('English', 'medium')">English (Medium)</button>
+                <button class="subject-btn" onclick="startQuiz('English', 'hard')">English (Hard)</button>
+                <button class="subject-btn" onclick="startQuiz('English', 'advanced')">English (Advanced)</button>
+                
+                <!-- Math -->
+                <button class="subject-btn" onclick="startQuiz('Math', 'easy')">Math (Easy)</button>
+                <button class="subject-btn" onclick="startQuiz('Math', 'medium')">Math (Medium)</button>
+                <button class="subject-btn" onclick="startQuiz('Math', 'hard')">Math (Hard)</button>
+                <button class="subject-btn" onclick="startQuiz('Math', 'advanced')">Math (Advanced)</button>
+                
+                <!-- Science -->
+                <button class="subject-btn" onclick="startQuiz('Science', 'easy')">Science (Easy)</button>
+                <button class="subject-btn" onclick="startQuiz('Science', 'medium')">Science (Medium)</button>
+                <button class="subject-btn" onclick="startQuiz('Science', 'hard')">Science (Hard)</button>
+                <button class="subject-btn" onclick="startQuiz('Science', 'advanced')">Science (Advanced)</button>
+            </div>
+        </div>
+
+        <!-- Score section -->
+        <div id="score" class="quiz" style="display: none;">
+            <h2>Your Score</h2>
+            <div id="score-message"></div>
+            <button id="return-to-subjects-btn" class="btn">Return to Subject Selection</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
