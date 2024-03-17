@@ -44,7 +44,7 @@ const questions = {
                 hint: "Think about different words for 'big' like 'large' or 'huge'."
             },
             {
-                question: "Which punctuation mark is used at the end of a question?",
+                question: "Which punctuation mark is used at the end of a sentence that is asking?",
                 answers: [
                     { text: "Question mark", correct: true },
                     { text: "Exclamation", correct: false },
