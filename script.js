@@ -528,8 +528,8 @@ hintButton.addEventListener("click", () => {
         const currentQuestion = currentSubjectQuestions[currentQuestionIndex];
         alert(currentQuestion.hint);
         hintCount--;
-        hintButton.innerText = Hint (${hintCount} left);
-    } else {
+        hintButton.innerText = 'Hint (${hintCount} left)';
+    } else {``
         alert("You've used all your hints for this quiz!");
     }
 });
@@ -539,7 +539,7 @@ returnToSubjectsButton.addEventListener("click", () => {
     document.getElementById("score").style.display = "none";
     document.getElementById("subject-selection").style.display = "block";
     hintCount = 3; // Reset hint count when returning to subject selection
-    hintButton.innerText = Hint (${hintCount} left);
+    hintButton.innerText = 'Hint (${hintCount} left)';
 });
 
 // Function to start the quiz with selected subject and difficulty level
@@ -551,7 +551,7 @@ function startQuiz(subject, level) {
     document.getElementById("quiz").style.display = "block";
     nextButton.innerHTML = "Next";
     hintCount = 3; // Reset hint count when starting a new quiz
-    hintButton.innerText = Hint (${hintCount} left);
+    hintButton.innerText = 'Hint (${hintCount} left)';
     showQuestion(currentSubjectQuestions);
 }
 
@@ -560,7 +560,7 @@ function showQuestion(questions) {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHTML = ${questionNo}. ${currentQuestion.question};
+    questionElement.innerHTML = '${questionNo}. ${currentQuestion.question}';
 
     // Start the timer for each question
     startTimer();
@@ -583,7 +583,7 @@ function startTimer() {
     const timerElement = document.getElementById("timer");
 
     timer = setInterval(() => {
-        timerElement.innerText = Time Left: ${timeLeft};
+        timerElement.innerText = 'Time Left: ${timeLeft}';
         timeLeft--;
 
         if (timeLeft < 0) {
@@ -629,5 +629,5 @@ function showScore() {
     resetState();
     document.getElementById("quiz").style.display = "none";
     document.getElementById("score").style.display = "block";
-    scoreMessage.innerHTML = You scored ${score} out of ${currentSubjectQuestions.length}!;
+    scoreMessage.innerHTML = 'You scored ${score} out of ${currentSubjectQuestions.length}!';
 }
