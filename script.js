@@ -629,5 +629,5 @@ function showScore() {
     resetState();
     document.getElementById("quiz").style.display = "none";
     document.getElementById("score").style.display = "block";
-    scoreMessage.innerHTML = 'You scored ${score} out of ${currentSubjectQuestions.length}!';
+    scoreMessage.innerHTML = `You scored ${score} out of ${currentSubjectQuestions.length}!`;
 }
