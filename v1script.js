@@ -26,8 +26,8 @@ const questions = {
             {
                 question: "What is the verb in the sentence: 'She sings beautifully.'?",
                 answers: [
-                    { text: "She", correct: true },
-                    { text: "Sings", correct: false },
+                    { text: "She", correct: false },
+                    { text: "Sings", correct: true },
                     { text: "Beautifullly", correct: false },
                     { text: "None of the above", correct: false }
                 ],
